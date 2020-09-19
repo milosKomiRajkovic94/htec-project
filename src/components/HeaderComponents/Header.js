@@ -1,18 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./header.css";
+import { useTranslation } from "react-i18next";
 
-import { TOP_NEWS, CATEGORIES, SEARCH } from "../constants/urls";
+import { connect } from "react-redux";
 
-import { LANGUAGE_EN, LANGUAGE_US } from "../constants/stringConstants";
+import { TOP_NEWS, CATEGORIES, SEARCH } from "../../constants/urls";
 
-export const Header = ({
+import { LANGUAGE_EN, LANGUAGE_US } from "../../constants/stringConstants";
+
+const Header = ({
   changeLocation,
   changeLanguage,
   currentLocation,
   currentLanguage,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <header className="header">
       <div className="headerThreeLeftOptions">
@@ -27,7 +31,7 @@ export const Header = ({
           tabIndex={0}
           onKeyPress={() => changeLocation(TOP_NEWS)}
         >
-          Top News
+          {t("topNews")}
         </div>
         <div
           onClick={() => changeLocation(CATEGORIES)}
@@ -40,7 +44,7 @@ export const Header = ({
           tabIndex={0}
           onKeyPress={() => changeLocation(CATEGORIES)}
         >
-          Categories
+          {t("categories")}
         </div>
         <div
           onClick={() => changeLocation(SEARCH)}
@@ -53,7 +57,7 @@ export const Header = ({
           tabIndex={0}
           onKeyPress={() => changeLocation(SEARCH)}
         >
-          Search
+          {t("search")}
         </div>
       </div>
       <div className="headerTwoRightOptions">
@@ -66,10 +70,11 @@ export const Header = ({
           }
           role="button"
           id="gbLanguage"
+          data-testid="gbLanguage"
           tabIndex={0}
           onKeyPress={() => changeLanguage(LANGUAGE_EN)}
         >
-          GB
+          {t("gb")}
         </div>
         <div
           onClick={() => changeLanguage(LANGUAGE_US)}
@@ -80,10 +85,11 @@ export const Header = ({
           }
           role="button"
           id="usLanguage"
+          data-testid="usLanguage"
           tabIndex={0}
           onKeyPress={() => changeLanguage(LANGUAGE_US)}
         >
-          US
+          {t("us")}
         </div>
       </div>
     </header>
@@ -93,4 +99,15 @@ export const Header = ({
 Header.propTypes = {
   changeLocation: PropTypes.func.isRequired,
   changeLanguage: PropTypes.func.isRequired,
+  currentLocation: PropTypes.string.isRequired,
+  currentLanguage: PropTypes.string.isRequired,
 };
+
+const mapStateToProps = (state) => {
+  return {
+    currentLocation: state.configReducer.currentLocation,
+    currentLanguage: state.configReducer.currentLanguage,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

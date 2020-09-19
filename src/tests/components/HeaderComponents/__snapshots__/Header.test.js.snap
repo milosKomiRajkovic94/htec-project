@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="headerThreeLeftOptions"
+  >
+    <div
+      className="headerOption headerOptionHighlighted"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      topNews
+    </div>
+    <div
+      className="headerOption"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      categories
+    </div>
+    <div
+      className="headerOption"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      search
+    </div>
+  </div>
+  <div
+    className="headerTwoRightOptions"
+  >
+    <div
+      className="headerOption headerOptionHighlighted"
+      data-testid="gbLanguage"
+      id="gbLanguage"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      gb
+    </div>
+    <div
+      className="headerOption"
+      data-testid="usLanguage"
+      id="usLanguage"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      us
+    </div>
+  </div>
+</header>
+`;
