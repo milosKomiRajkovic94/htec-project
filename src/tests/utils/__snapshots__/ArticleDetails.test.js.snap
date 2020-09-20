@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="singleArticleDetails"
+>
+  <div
+    className="singleArticleDetailsTitle"
+  >
+    <li>
+      something
+    </li>
+  </div>
+  <div
+    className="singleArticleDetailsImage"
+  >
+    <img
+      alt="singleArticleDetailsImageTag"
+      className="singleArticleDetailsImageTag"
+      src="boxImage.png"
+    />
+  </div>
+  <div
+    className="singleArticleDetailsContent"
+  >
+    something
+  </div>
+  <div
+    className="singleArticleDetailsContentBack"
+  >
+    <span
+      className="cursorPointer"
+      data-testid="back"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      &lt; backToList
+    </span>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   display: inline-flex;
-  border: 1px solid #111;
+  border: 1px solid $black;
   margin: 0px;
   margin-top: 0.5px;
 }
@@ -14,16 +14,16 @@
   display: inline-flex;
   position: absolute;
   right: 0px;
-  padding-right: 14px;
+  padding-right: 22px;
 }
 
 .headerOption {
   padding: 20px;
-  border-right: 1px solid #111;
+  border-right: 1px solid $black;
 }
 
 .headerOption#gbLanguage {
-  border-left: 1px solid #111;
+  border-left: 1px solid $black;
 }
 
 .headerOption#usLanguage {
@@ -31,8 +31,8 @@
 }
 
 .headerOptionHighlighted {
-  background-color: #777777;
-  color: #fff;
+  background-color: $tabBackgroundColor;
+  color: $white;
 }
 
 /* 
@@ -43,12 +43,12 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .header {
     display: inline-grid;
-    border: 1px solid #111;
+    border: 1px solid $black;
   }
 
   .headerThreeLeftOptions {
     display: unset;
-    border: 1px solid #111;
+    border: 1px solid $black;
   }
 
   .headerTwoRightOptions {
@@ -56,18 +56,18 @@
     position: unset;
     padding-right: unset;
     right: unset;
-    border: 1px solid #111;
+    border: 1px solid $black;
   }
 
   .headerOption {
-    border: 1px solid #111;
+    border: 1px solid $black;
   }
 
   .headerOption#gbLanguage {
-    border-left: 1px solid #111;
+    border-left: 1px solid $black;
   }
 
   .headerOption#usLanguage {
-    border-right: 1px solid #111;
+    border-right: 1px solid $black;
   }
 }

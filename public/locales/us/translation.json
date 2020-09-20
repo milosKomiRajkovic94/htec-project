@@ -16,5 +16,7 @@
   "technology": "Technology",
   "expanCollapseIcon": "expan/collapse icon",
   "backToList": "Back to list",
-  "topNewsFrom": "Top news from United States"
+  "topNewsFrom": "Top news from United States",
+  "loading": "Loading",
+  "failedLoading": "Loading has failed"
 }

@@ -1,0 +1,86 @@
+.singleArticle {
+  width: 250px;
+  height: auto;
+  text-align: justify;
+  border: 1px solid $textColor;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.singleArticleTitle {
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-bottom: 5px;
+  height: 60px;
+  overflow-y: auto;
+}
+
+.singleArticleImage {
+  padding-left: 20px;
+  width: 180px;
+  height: 100px;
+}
+
+.singleArticleImageTag {
+  width: 100%;
+  height: 100%;
+}
+
+.singleArticleDescription {
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 60px;
+  overflow-y: auto;
+}
+
+.singleArticleMoreOption {
+  text-align: end;
+  padding-right: 50px;
+}
+
+.articlesContainer {
+  display: flow-root;
+}
+
+.singleArticleDetailsTitle {
+  font-size: 20px;
+  padding-left: 25px;
+}
+
+.singleArticleDetailsImage {
+  padding-left: 25px;
+  width: 60%;
+  height: 200px;
+}
+
+.singleArticleDetailsImageTag {
+  width: 100%;
+  height: 100%;
+}
+
+.singleArticleDetailsContent {
+  width: 58.5%;
+  height: 200px;
+  margin-left: 25px;
+  margin-top: 10px;
+  overflow-y: auto;
+  border: 1px solid $textColor;
+  padding: 10px;
+}
+
+.singleArticleDetailsContentBack {
+  margin-left: 25px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.headerOptionHighlightedDisabled {
+  background-color: $disablementColor;
+}

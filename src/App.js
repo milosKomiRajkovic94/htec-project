@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import {
   setCurrentLanguage,
   setCurrentLocation,
+  setAreLanguagesDisabled,
 } from "./actions/configActions";
 
 import { TOP_NEWS, CATEGORIES, SEARCH, HOME } from "./constants/urls";
@@ -21,13 +22,21 @@ import Header from "./components/HeaderComponents/Header";
 
 import TopNewsContainer from "./components/TopNewsComponents/TopNewsContainer";
 
-const App = ({ setCurrentLanguage, setCurrentLocation }) => {
+import Loader from "./utils/Loader";
+
+const App = ({
+  setCurrentLanguageAction,
+  setCurrentLocationAction,
+  setAreLanguagesDisabledAction,
+}) => {
   const history = useHistory();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   function waitingComponent(Component) {
     return (props) => (
-      <Suspense fallback={<div>Wait please</div>}>
+      <Suspense
+        fallback={<Loader classNameOfWrapper="centered" text={t("loading")} />}
+      >
         <Component {...props} />
       </Suspense>
     );
@@ -35,12 +44,13 @@ const App = ({ setCurrentLanguage, setCurrentLocation }) => {
 
   function changeLocation(locationToGo) {
     history.push(locationToGo);
-    setCurrentLocation(locationToGo);
+    setCurrentLocationAction(locationToGo);
+    setAreLanguagesDisabledAction(false);
   }
 
   function changeLanguage(languageToChange) {
     i18n.changeLanguage(languageToChange);
-    setCurrentLanguage(languageToChange);
+    setCurrentLanguageAction(languageToChange);
   }
 
   return (
@@ -80,8 +90,12 @@ const App = ({ setCurrentLanguage, setCurrentLocation }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrentLanguage: bindActionCreators(setCurrentLanguage, dispatch),
-    setCurrentLocation: bindActionCreators(setCurrentLocation, dispatch),
+    setCurrentLanguageAction: bindActionCreators(setCurrentLanguage, dispatch),
+    setCurrentLocationAction: bindActionCreators(setCurrentLocation, dispatch),
+    setAreLanguagesDisabledAction: bindActionCreators(
+      setAreLanguagesDisabled,
+      dispatch
+    ),
   };
 };
 
