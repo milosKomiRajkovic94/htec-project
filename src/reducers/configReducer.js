@@ -1,6 +1,7 @@
 import {
   SET_CURRENT_LANGUAGE,
   SET_CURRENT_LOCATION,
+  SET_ARE_LANGUAGES_DISABLED,
 } from "../actions/actionTypes";
 
 import initialState from "../initialState";
@@ -21,6 +22,13 @@ export default function configReducer(
       return {
         ...state,
         currentLanguage: action.currentLanguage,
+      };
+    }
+
+    case SET_ARE_LANGUAGES_DISABLED: {
+      return {
+        ...state,
+        areLanguagesDisabled: action.areLanguagesDisabled,
       };
     }
 

@@ -14,8 +14,13 @@ const Header = ({
   changeLanguage,
   currentLocation,
   currentLanguage,
+  areLanguagesDisabled,
 }) => {
   const { t } = useTranslation();
+
+  const classNameForDisablement = areLanguagesDisabled
+    ? "headerOptionHighlightedDisabled"
+    : "";
 
   return (
     <header className="header">
@@ -62,32 +67,48 @@ const Header = ({
       </div>
       <div className="headerTwoRightOptions">
         <div
-          onClick={() => changeLanguage(LANGUAGE_EN)}
+          onClick={() => {
+            if (!areLanguagesDisabled) {
+              changeLanguage(LANGUAGE_EN);
+            }
+          }}
           className={
             currentLanguage === LANGUAGE_EN
-              ? "headerOption headerOptionHighlighted"
-              : "headerOption"
+              ? `headerOption headerOptionHighlighted ${classNameForDisablement}`
+              : `headerOption ${classNameForDisablement}`
           }
           role="button"
           id="gbLanguage"
           data-testid="gbLanguage"
           tabIndex={0}
-          onKeyPress={() => changeLanguage(LANGUAGE_EN)}
+          onKeyPress={() => {
+            if (!areLanguagesDisabled) {
+              changeLanguage(LANGUAGE_EN);
+            }
+          }}
         >
           {t("gb")}
         </div>
         <div
-          onClick={() => changeLanguage(LANGUAGE_US)}
+          onClick={() => {
+            if (!areLanguagesDisabled) {
+              changeLanguage(LANGUAGE_US);
+            }
+          }}
           className={
             currentLanguage === LANGUAGE_US
-              ? "headerOption headerOptionHighlighted"
-              : "headerOption"
+              ? `headerOption headerOptionHighlighted ${classNameForDisablement}`
+              : `headerOption ${classNameForDisablement}`
           }
           role="button"
           id="usLanguage"
           data-testid="usLanguage"
           tabIndex={0}
-          onKeyPress={() => changeLanguage(LANGUAGE_US)}
+          onKeyPress={() => {
+            if (!areLanguagesDisabled) {
+              changeLanguage(LANGUAGE_US);
+            }
+          }}
         >
           {t("us")}
         </div>
@@ -107,6 +128,7 @@ const mapStateToProps = (state) => {
   return {
     currentLocation: state.configReducer.currentLocation,
     currentLanguage: state.configReducer.currentLanguage,
+    areLanguagesDisabled: state.configReducer.areLanguagesDisabled,
   };
 };
 

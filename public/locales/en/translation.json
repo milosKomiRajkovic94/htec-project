@@ -16,5 +16,7 @@
   "technology": "Technology",
   "expanCollapseIcon": "expan/collapse icon",
   "backToList": "Back to list",
-  "topNewsFrom": "Top news from Great Britain"
+  "topNewsFrom": "Top news from Great Britain",
+  "loading": "Loading",
+  "failedLoading": "Loading has failed"
 }

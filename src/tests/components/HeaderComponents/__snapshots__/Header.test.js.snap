@@ -39,7 +39,7 @@ exports[`matches snapshot 1`] = `
     className="headerTwoRightOptions"
   >
     <div
-      className="headerOption headerOptionHighlighted"
+      className="headerOption headerOptionHighlighted "
       data-testid="gbLanguage"
       id="gbLanguage"
       onClick={[Function]}
@@ -50,7 +50,7 @@ exports[`matches snapshot 1`] = `
       gb
     </div>
     <div
-      className="headerOption"
+      className="headerOption "
       data-testid="usLanguage"
       id="usLanguage"
       onClick={[Function]}
