@@ -35,4 +35,9 @@ export default {
     categoriesTechnologyNewsFailed: false,
     categoriesTechnologyNewsAreLoading: false,
   },
+  searchReducerState: {
+    searchedNews: [],
+    searchedNewsLoadingFailed: false,
+    searchedNewsAreLoading: false,
+  },
 };

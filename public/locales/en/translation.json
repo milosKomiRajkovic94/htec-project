@@ -20,5 +20,6 @@
   "loading": "Loading",
   "failedLoading": "Loading has failed",
   "top": "Top",
-  "newsFrom": "news from Great Britain"
+  "newsFrom": "news from Great Britain",
+  "searchTerm": "Search term"
 }
