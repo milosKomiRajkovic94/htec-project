@@ -5,16 +5,16 @@ import { useTranslation } from "react-i18next";
 
 import { connect } from "react-redux";
 
-import { TOP_NEWS, CATEGORIES, SEARCH } from "../../constants/urls";
+import { TOP_NEWS, CATEGORIES, SEARCH, HOME } from "../../constants/urls";
 
 import { LANGUAGE_EN, LANGUAGE_US } from "../../constants/stringConstants";
 
 const Header = ({
   changeLocation,
   changeLanguage,
-  currentLocation,
   currentLanguage,
   areLanguagesDisabled,
+  location,
 }) => {
   const { t } = useTranslation();
 
@@ -28,7 +28,7 @@ const Header = ({
         <div
           onClick={() => changeLocation(TOP_NEWS)}
           className={
-            currentLocation === TOP_NEWS
+            location.pathname === TOP_NEWS || location.pathname === HOME
               ? "headerOption headerOptionHighlighted"
               : "headerOption"
           }
@@ -41,7 +41,7 @@ const Header = ({
         <div
           onClick={() => changeLocation(CATEGORIES)}
           className={
-            currentLocation === CATEGORIES
+            location.pathname === CATEGORIES
               ? "headerOption headerOptionHighlighted"
               : "headerOption"
           }
@@ -54,7 +54,7 @@ const Header = ({
         <div
           onClick={() => changeLocation(SEARCH)}
           className={
-            currentLocation === SEARCH
+            location.pathname === SEARCH
               ? "headerOption headerOptionHighlighted"
               : "headerOption"
           }
@@ -120,13 +120,16 @@ const Header = ({
 Header.propTypes = {
   changeLocation: PropTypes.func.isRequired,
   changeLanguage: PropTypes.func.isRequired,
-  currentLocation: PropTypes.string.isRequired,
   currentLanguage: PropTypes.string.isRequired,
+  location: PropTypes.string,
+};
+
+Header.defaultProps = {
+  location: "",
 };
 
 const mapStateToProps = (state) => {
   return {
-    currentLocation: state.configReducer.currentLocation,
     currentLanguage: state.configReducer.currentLanguage,
     areLanguagesDisabled: state.configReducer.areLanguagesDisabled,
   };

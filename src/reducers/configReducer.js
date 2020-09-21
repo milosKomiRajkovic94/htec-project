@@ -2,6 +2,7 @@ import {
   SET_CURRENT_LANGUAGE,
   SET_CURRENT_LOCATION,
   SET_ARE_LANGUAGES_DISABLED,
+  REDIRECTED_TO_SPECIFIC_CATEGORY,
 } from "../actions/actionTypes";
 
 import initialState from "../initialState";
@@ -29,6 +30,14 @@ export default function configReducer(
       return {
         ...state,
         areLanguagesDisabled: action.areLanguagesDisabled,
+      };
+    }
+
+    case REDIRECTED_TO_SPECIFIC_CATEGORY: {
+      return {
+        ...state,
+        redirectedToSpecificCategory: action.redirectedToSpecificCategory,
+        currentSpecificCategory: action.currentSpecificCategory,
       };
     }
 

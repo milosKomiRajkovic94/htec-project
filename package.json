@@ -21,7 +21,8 @@
     "react-scripts": "3.4.3",
     "react-spinners": "^0.9.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "simple-line-icons": "^2.5.5"
   },
   "scripts": {
     "start": "react-scripts start",

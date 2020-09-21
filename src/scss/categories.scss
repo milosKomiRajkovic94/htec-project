@@ -1,0 +1,132 @@
+.categorySliderTitle {
+  display: flex;
+  padding-left: 25px;
+}
+
+.categorySliderTitleSpan {
+  display: flex;
+}
+
+.categorySliderTitleSpan span {
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.expandIcon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.categorySlidesFuncContainer {
+  width: 100%;
+  display: flex;
+}
+
+.categorySlidesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.categorySliderMoverRight,
+.categorySliderMoverLeft {
+  margin-top: 25%;
+  font-size: 25px;
+}
+
+.categoryArticle {
+  transition-timing-function: ease-in;
+  transition: display 1s;
+  transition-delay: 1s;
+}
+
+.displayNone.categoryArticle {
+  display: none;
+}
+
+.categoriesListContainer {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+}
+
+.containerBelow.containerSliderBelow {
+  padding-left: unset;
+  padding-right: unset;
+  padding-bottom: unset;
+  padding-top: unset;
+}
+
+.categorySliderMoverRight.cursorPointer.noselect {
+  margin-right: 50px;
+}
+
+.categoriesListsContainer {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  border: 1px solid $tabBackgroundColor;
+  border-radius: 25px;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}

@@ -18,5 +18,7 @@
   "backToList": "Back to list",
   "topNewsFrom": "Top news from Great Britain",
   "loading": "Loading",
-  "failedLoading": "Loading has failed"
+  "failedLoading": "Loading has failed",
+  "top": "Top",
+  "newsFrom": "news from Great Britain"
 }

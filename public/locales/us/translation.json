@@ -18,5 +18,7 @@
   "backToList": "Back to list",
   "topNewsFrom": "Top news from United States",
   "loading": "Loading",
-  "failedLoading": "Loading has failed"
+  "failedLoading": "Loading has failed",
+  "top": "Top",
+  "newsFrom": "news from United States"
 }
