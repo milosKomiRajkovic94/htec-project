@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `API_KEY`
 
-String constant NEWS_API_KEY with the apiKey sent in the request is located in ./src/constants/stringConstants.js file.
+String constant NEWS_API_KEY with the apiKey sent in the requests is located in ./src/constants/stringConstants.js file.
 
 After 500th request in the day, the request will break with the status 403, if you are on developer plan, like we are. 
 
