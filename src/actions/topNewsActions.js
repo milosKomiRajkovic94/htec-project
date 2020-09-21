@@ -44,7 +44,7 @@ export function loadCurrentTopNewsFromCountry(currentCountry) {
       .then((response) => {
         dispatch(topNewsLoadedSuccessfullyAction(response.data.articles));
       })
-      .catch((err) => {
+      .catch(() => {
         dispatch(topNewsLoadingFailedAction(true));
       });
   };

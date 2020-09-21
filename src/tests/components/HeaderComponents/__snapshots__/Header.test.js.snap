@@ -8,7 +8,7 @@ exports[`matches snapshot 1`] = `
     className="headerThreeLeftOptions"
   >
     <div
-      className="headerOption headerOptionHighlighted"
+      className="headerOption"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"

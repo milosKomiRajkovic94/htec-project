@@ -1,0 +1,168 @@
+li {
+  list-style: none;
+  text-decoration: unset;
+}
+
+li:before {
+  content: '•';
+  font-size: 170%;
+  position: relative;
+  top: 3px;
+  padding-right: 10px;
+  text-decoration: unset;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.displayNone {
+  display: none;
+}
+
+.visibilityHidden {
+  visibility: hidden;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.categorySliderTitle {
+  display: flex;
+}
+
+.categorySliderTitleSpan {
+  display: flex;
+}
+
+.categorySliderTitleSpan span {
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.expandIcon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.categorySlidesFuncContainer {
+  width: 100%;
+  display: flex;
+}
+
+.categorySlidesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.categorySliderMoverRight,
+.categorySliderMoverLeft {
+  margin-top: 25%;
+  font-size: 25px;
+}
+
+.categoryArticle {
+  transition-timing-function: ease-in;
+  transition: display 1s;
+  transition-delay: 1s;
+}
+
+.displayNone.categoryArticle {
+  display: none;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .categorySlidesContainer {
+    width: 100%;
+    display: unset;
+    justify-content: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}

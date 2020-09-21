@@ -63,7 +63,11 @@ const TopNewsContainer = ({
   ]);
 
   if (topNewsAreLoading) {
-    return <Loader classNameOfWrapper="centered" text={t("loading")} />;
+    return (
+      <DocumentTitle title={`HTEC App - ${t("topNews")}`}>
+        <Loader classNameOfWrapper="centered" text={t("loading")} />
+      </DocumentTitle>
+    );
   }
 
   if (topNewsLoadingFailed) {

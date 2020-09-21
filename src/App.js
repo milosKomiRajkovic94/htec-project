@@ -2,7 +2,13 @@ import React, { lazy, Suspense } from "react";
 
 import "./scss/index.scss";
 
-import { useHistory, Route, Switch, withRouter } from "react-router-dom";
+import {
+  useHistory,
+  Route,
+  Switch,
+  withRouter,
+  useLocation,
+} from "react-router-dom";
 
 import { connect } from "react-redux";
 
@@ -14,6 +20,7 @@ import {
   setCurrentLanguage,
   setCurrentLocation,
   setAreLanguagesDisabled,
+  setRedirectedToSpecificCategory,
 } from "./actions/configActions";
 
 import { TOP_NEWS, CATEGORIES, SEARCH, HOME } from "./constants/urls";
@@ -28,8 +35,10 @@ const App = ({
   setCurrentLanguageAction,
   setCurrentLocationAction,
   setAreLanguagesDisabledAction,
+  setRedirectedToSpecificCategoryAction,
 }) => {
   const history = useHistory();
+  const location = useLocation();
   const { t, i18n } = useTranslation();
 
   function waitingComponent(Component) {
@@ -46,6 +55,7 @@ const App = ({
     history.push(locationToGo);
     setCurrentLocationAction(locationToGo);
     setAreLanguagesDisabledAction(false);
+    setRedirectedToSpecificCategoryAction(false);
   }
 
   function changeLanguage(languageToChange) {
@@ -55,7 +65,11 @@ const App = ({
 
   return (
     <div className="App">
-      <Header changeLocation={changeLocation} changeLanguage={changeLanguage} />
+      <Header
+        location={location}
+        changeLocation={changeLocation}
+        changeLanguage={changeLanguage}
+      />
       <Switch>
         <Route exact path={HOME} component={TopNewsContainer} />
         <Route
@@ -94,6 +108,10 @@ const mapDispatchToProps = (dispatch) => {
     setCurrentLocationAction: bindActionCreators(setCurrentLocation, dispatch),
     setAreLanguagesDisabledAction: bindActionCreators(
       setAreLanguagesDisabled,
+      dispatch
+    ),
+    setRedirectedToSpecificCategoryAction: bindActionCreators(
+      setRedirectedToSpecificCategory,
       dispatch
     ),
   };

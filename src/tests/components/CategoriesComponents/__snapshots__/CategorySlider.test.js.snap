@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="categorySliderContainer"
+>
+  <div
+    className="categorySliderTitle"
+  >
+    <span
+      className="categorySliderTitleSpan cursorPointer"
+    >
+      <li />
+      <span
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        
+      </span>
+    </span>
+    <i
+      className="icon-arrow-down cursorPointer expandIcon noselect"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
+  </div>
+  <div
+    className="categorySlidesFuncContainer"
+  >
+    <span
+      className="categorySliderMoveLeft cursorPointer visibilityHidden noselect"
+      data-testid="moveLeftButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      &lt;
+    </span>
+    <div
+      className="categorySlidesContainer"
+    />
+    <span
+      className="categorySliderMoverRight cursorPointer noselect"
+      data-testid="moveRightButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      &gt;
+    </span>
+  </div>
+</div>
+`;

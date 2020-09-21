@@ -14,6 +14,8 @@ import configureStore from "./store";
 
 import "./i18n";
 
+import "simple-line-icons/css/simple-line-icons.css";
+
 const store = configureStore();
 
 ReactDOM.render(
