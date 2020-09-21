@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `API_KEY`
+
+String constant NEWS_API_KEY with the apiKey sent in the request is located in ./src/constants/stringConstants.js file.
+
+After 500th request in the day, the request will break with the status 403, if you are on developer plan, like we are. 
+
+So, you need to update the constant with the valid NEWS_API_KEY if that happens.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
