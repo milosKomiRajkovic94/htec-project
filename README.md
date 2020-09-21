@@ -1,16 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `API_KEY`
+### API_KEY
 
 String constant NEWS_API_KEY with the apiKey sent in the requests is located in ./src/constants/stringConstants.js file.
 
 After 500th request in the day, the request will break with the status 403, if you are on developer plan, like we are. 
 
 So, you need to update the constant with the valid NEWS_API_KEY if that happens.
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `npm start`
 
