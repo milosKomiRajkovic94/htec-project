@@ -59,7 +59,9 @@ export const Article = ({ singleArticleData, onMore }) => {
           id="originalTitle"
           ref={titleRef}
         >
-          {singleArticleData.title}
+          {singleArticleData.title.length > 50
+            ? `${singleArticleData.title.substring(0, 47)}...`
+            : singleArticleData.title}
         </div>
         <div className="singleArticleImage">
           <img
