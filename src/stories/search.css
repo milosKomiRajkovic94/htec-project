@@ -1,0 +1,25 @@
+.containerBelow {
+  padding: 1rem;
+  margin-right: -2px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0px;
+}
+
+.titleOfContainerBelow {
+  font-size: 20px;
+  padding-left: 25px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+}
+
+.searchTermInputField {
+  width: 400px;
+  height: 40px;
+  padding-left: 40px;
+  background-color: #dddddd;
+  font-size: 20px;
+}

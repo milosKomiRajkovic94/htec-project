@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="containerBelow"
+>
+  <div
+    className="titleOfContainerBelow"
+    data-testid="search"
+  >
+    <li>
+      searchTopNewsByTheTerm
+    </li>
+  </div>
+  <form
+    className="searchForm"
+  >
+    <input
+      className="searchTermInputField"
+      onChange={[Function]}
+      placeholder="searchTerm..."
+      value=""
+    />
+  </form>
+  <div
+    className="displayNone"
+  />
+  <div
+    className="loaderWrapperDefaultStyle centered "
+  >
+    <div
+      className="css-0"
+    >
+      <div
+        className="css-110do72"
+      />
+      <div
+        className="css-1by9rry"
+      />
+      <div
+        className="css-110do72"
+      />
+    </div>
+    <p
+      className="loaderTextDefaultStyle "
+    >
+      loading
+    </p>
+  </div>
+  <div
+    className="displayNone"
+  >
+    failedLoading
+  </div>
+</div>
+`;

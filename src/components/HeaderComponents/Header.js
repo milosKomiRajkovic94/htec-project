@@ -121,11 +121,13 @@ Header.propTypes = {
   changeLocation: PropTypes.func.isRequired,
   changeLanguage: PropTypes.func.isRequired,
   currentLanguage: PropTypes.string.isRequired,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: "",
+  }),
 };
 
 Header.defaultProps = {
-  location: "",
+  location: {},
 };
 
 const mapStateToProps = (state) => {

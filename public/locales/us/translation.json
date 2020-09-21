@@ -20,5 +20,6 @@
   "loading": "Loading",
   "failedLoading": "Loading has failed",
   "top": "Top",
-  "newsFrom": "news from United States"
+  "newsFrom": "news from United States",
+  "searchTerm": "Search term"
 }
