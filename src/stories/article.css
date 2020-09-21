@@ -60,3 +60,20 @@
 .visibilityHidden {
   visibility: hidden;
 }
+
+.singleArticleFullTitle {
+  width: 250px;
+  height: 100px;
+  overflow-y: hidden;
+}
+
+.singleArticleFullTitle {
+  width: 250px;
+  height: 100px;
+  overflow-y: auto;
+  overflow: overlay;
+  position: absolute;
+  border: 1px solid #111;
+  left: 25%;
+  background-color: #fff;
+}

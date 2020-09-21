@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="articleWrapper"
+>
+  <div
+    className="displayNone"
+    style={Object {}}
+  >
+    something
+  </div>
+  <div
+    className="singleArticle"
+  >
+    <div
+      className="singleArticleTitle"
+      id="originalTitlesomething"
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="banner"
+    >
+      something
+    </div>
+    <div
+      className="singleArticleImage"
+    >
+      <img
+        alt="singleArticleImageTag"
+        className="singleArticleImageTag"
+        src="boxImage.png"
+      />
+    </div>
+    <div
+      className="singleArticleDescription"
+    >
+      something
+    </div>
+    <div
+      className="singleArticleMoreOption"
+    >
+      <span
+        className="cursorPointer"
+        data-testid="more"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        more &gt;
+      </span>
+    </div>
+  </div>
+</div>
+`;
